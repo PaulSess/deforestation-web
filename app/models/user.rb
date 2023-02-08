@@ -6,5 +6,5 @@ class User < ApplicationRecord
   validates :Username, presence: true
   validates :email, presence: true
   validates :password, presence: true
-  validates :Department, presence: true
+  belongs_to :departments
 end

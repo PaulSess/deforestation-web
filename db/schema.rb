@@ -10,9 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_08_134954) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_08_172122) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "departments", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "coordinates"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "departments_id", null: false
+    t.index ["departments_id"], name: "index_projects_on_departments_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,9 +38,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_08_134954) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "Username"
-    t.string "Department"
+    t.bigint "department_id", null: false
+    t.index ["department_id"], name: "index_users_on_department_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "projects", "departments", column: "departments_id"
+  add_foreign_key "users", "departments"
 end
