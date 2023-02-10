@@ -1,32 +1,74 @@
-<h2>Sign up</h2>
 
-<%# <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %> %>
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),
-  data: {turbo: false}) do |f| %>
-  
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= render :partial => 'shared/navbar' %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="container">
+  <div class="logo-div">
+    <%= image_tag "deforestation-word-logo.png", style: 'width: 200px;margin: 10px auto' %>
+  </div>
+  <h2>Sign Up</h2>
+  <div class="d-flex">
+  <p>or &nbsp;</p><%= render "devise/shared/links" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),
+    data: {turbo: false}) do |f| %>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
 
-<%= render "devise/shared/links" %>
+    <div class="field" style="display:flex; flex-direction:column;">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %>
+      <%= f.password_field :password, autocomplete: "new-password" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Sign up", style:"background-color:transparent;border:none;" %>
+    </div>
+  <% end %>
+</div>
+
+<style>
+.container{
+  width: fit-content;
+  margin-top: 10%;
+  border: solid #C9BC9B 10px;
+  border-radius: 10px;
+  background-color: #C9BC9B;
+}
+.login-header{
+  width: fit-content;
+  margin: 10px 60% 10px auto;
+}
+.login-input{
+  background-color: #F5F5F5;
+  border-radius:5px;
+  border:none;
+  height: 30px;
+}
+.field{
+  margin: 10px auto;
+  width: fit-content;
+
+}
+.actions{
+  width: 120px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #958c73;
+  border-radius: 5px;
+}
+</style>
