@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <%= render :partial => 'shared/navbar' %>
+
+<div class="container">
+<div class="logo-div">
+  <%= image_tag "deforestation-word-logo.png", style: 'width: 200px;' %>
+</div>
+  <h3 class="login-header">Log In</h3>
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: {turbo: false}) do |f| %>
+
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"login-input" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "current-password", class:"login-input", placeholder:"at least 6 digits" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+
+    <div class="actions">
+      <%= f.submit "Log in", style: 'background-color: transparent;border: none;' %>
+    </div>
+  <% end %>
+
+</div>
+<style>
+.container{
+  width: fit-content;
+  margin-top: 10%;
+  border: solid #C9BC9B 10px;
+  border-radius: 10px;
+  background-color: #C9BC9B;
+}
+.login-header{
+  width: fit-content;
+  margin: 10px 60% 10px auto;
+}
+.login-input{
+  background-color: #F5F5F5;
+  border-radius:5px;
+  border:none;
+  height: 30px;
+}
+.login-input:focus::placeholer {
+  color: transparent;
+}
+.field{
+  margin: 10px auto;
+}
+.actions{
+  width: 120px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #958c73;
+  border-radius: 5px;
+}
+</style>
+
+</body>
+</html>

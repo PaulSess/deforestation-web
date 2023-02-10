@@ -7,61 +7,13 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
   <%= stylesheet_link_tag "home.css" %>
+  <%= stylesheet_link_tag "/app/views/shared/navbar.css" %>
   <title>Document</title>
 </head>
+  <%= render :partial => 'shared/navbar' %>
   <header>
-  <%# <nav class="main-navbar">
-    <ul class="nav-ul">
-      <div>
-        <li><a href="#">Logo</a></li>
-      </div>
-      <div class="nav-ul">
-        <li><a href="#">english</a><a href="#">espaniol</a></li>
-        <li><a href="#">Log In</a></li>
-      </div>
-    </ul>
-  </nav> %>
-
-
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#7fba72;">
-        <div class="container-fluid">
-            <%= image_tag("deforestation-word-logo.png", {:style => "width:200px; filter: drop-shadow(3px 3px 5px #303E34);"}) %>
-            <%# <a href="#" class="navbar-brand">Brand</a> %>
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav">
-                    <a href="" class="nav-item nav-link active">Home</a>
-                    <a href="#" class="nav-item nav-link">Profile</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Messages</a>
-                        <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Inbox</a>
-                            <a href="#" class="dropdown-item">Sent</a>
-                            <a href="#" class="dropdown-item">Drafts</a>
-                        </div>
-                    </div>
-                </div>
-                <%# <form class="d-flex">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <button type="button" class="btn btn-secondary"><i class="bi-search"></i></button>
-                    </div>
-                </form> %>
-                <div class="navbar-nav">
-                    <a href="#" class="nav-item nav-link">english</a>
-                    <a href="#" class="nav-item nav-link dissapear-in-collapse">|</a>
-                    <a href="#" class="nav-item nav-link">espaniol</a>
-                    <a href="#" class="nav-item nav-link"><i style="margin-left:10px;margin-right:3px;" class="fa-solid fa-right-to-bracket"></i>Log In</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
   </header>
   <body>
-
 
   </body>
 </html>
