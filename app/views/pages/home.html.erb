@@ -1,4 +1,63 @@
-<h1>Hello world</h1><br>
-<h1 class="text-3xl text font-bold text-grey underline">
-    Hello world!
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+  <%= stylesheet_link_tag "home.css" %>
+  <title>Document</title>
+</head>
+  <header>
+  <%# <nav class="main-navbar">
+    <ul class="nav-ul">
+      <div>
+        <li><a href="#">Logo</a></li>
+      </div>
+      <div class="nav-ul">
+        <li><a href="#">english</a><a href="#">espaniol</a></li>
+        <li><a href="#">Log In</a></li>
+      </div>
+    </ul>
+  </nav> %>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#A2CBB3;">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Brand</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="" class="nav-item nav-link active">Home</a>
+                    <a href="#" class="nav-item nav-link">Profile</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Messages</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Inbox</a>
+                            <a href="#" class="dropdown-item">Sent</a>
+                            <a href="#" class="dropdown-item">Drafts</a>
+                        </div>
+                    </div>
+                </div>
+                <%# <form class="d-flex">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <button type="button" class="btn btn-secondary"><i class="bi-search"></i></button>
+                    </div>
+                </form> %>
+                <div class="navbar-nav">
+                    <a href="#" class="nav-item nav-link"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+  </header>
+  <body>
+
+
+  </body>
+</html>
