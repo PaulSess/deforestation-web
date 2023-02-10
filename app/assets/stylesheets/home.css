@@ -16,3 +16,9 @@
 .nav-ul li{
   margin-left: 10px;
 } */
+
+@media only screen and (max-width: 990px) {
+  .dissapear-in-collapse {
+    display: none;
+  }
+}
