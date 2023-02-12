@@ -1,0 +1,58 @@
+<html>
+  <%= render :partial => 'shared/navbar' %>
+<body>
+  <section id="about-sec-1">
+    <div id="welcome-header">
+      <h1>Welchome to Deforestation</h1>
+    </div>
+    <%= image_tag("lingchor-cut.jpeg", class:"about-header-img") %>
+  </section>
+
+  <section id="about-sec-2">
+    <div class="about-card">
+      <%= image_tag("satellite-cut.jpg", class:"card-img sat-img") %>
+      <p></p>
+    </div>
+
+    <div class="about-card">
+
+    </div>
+
+    <div class="about-card">
+
+    </div>
+  </section>
+    <%= image_tag("donald-giannatti-sat-cut.jpg", class:"about-header-img") %>
+
+    <%# <%= render :partial => 'shared/bg-images' %>
+</body>
+  <%= render :partial => 'shared/footer' %>
+</html>
+
+
+<style>
+#about-sec-1{
+  height: fit-content;
+}
+.about-header-img{
+  width: 100%;
+
+}
+#welcome-header{
+  display: flex;
+  justify-content: center;
+}
+#welcome-header h1{
+  position: absolute;
+  color: #F9F0E1;
+  width: fit-content;
+  margin: 60px auto;
+  filter: drop-shadow(3px 3px 5px #303E34);
+  font-family: 'Bebas Neue', cursive;
+  font-size: 50px;
+}
+.sat-img{
+  width: 200px;
+  border-radius: 50%;
+}
+</style>
