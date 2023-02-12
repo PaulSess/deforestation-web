@@ -1,15 +1,35 @@
-<footer>
-  <div>
+<%# <footer> %>
+  <%# <div class="half-width">
     <%= link_to root_path do %>
-        <%= image_tag("deforestation-word-logo.png", {:style => "width:200px; filter: drop-shadow(3px 3px 5px #303E34);"}) %>
-    <% end %>
-  </div>
-  <div>
-  <a href="#" data-bs-toggle="modal" data-bs-target="#ContactModal">Contact us</a>
-  <%# <button type="button" data-toggle="modal" data-target="#ContactModal"><h3>Contact us if you have issues</h3></button> %>
-  </div>
-</footer>
+        <%# <%= image_tag("deforestation-word-logo.png", { :class => "footer-logo" }) %>
+    <%# <% end %>
+  <%# </div> %>
 
+  <%# <div class="half-width">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#ContactModal"><h2 class="contact-us">Contact us</h2></a>
+  </div> %>
+<%# </footer> %>
+
+<footer>
+  <div class="container">
+    <div class="row h-75">
+      <div class="col">
+        <%= link_to root_path do %>
+          <%= image_tag("deforestation-word-logo.png", { :class => "footer-logo" }) %>
+        <% end %>
+      </div>
+      <div class="col">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#ContactModal"><h2 class="contact-us">Contact us</h2></a>
+      </div>
+    </div>
+    <div class="row h-25">
+      <div class="col">
+        Here will be more information in the footer Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint repellendus illo incidunt mollitia impedit voluptas reiciendis voluptatem earum accusamus culpa exercitationem obcaecati, nobis eligendi, similique, iure odit. Voluptatum, accusamus in.
+      </div>
+    </div>
+  </div>
+
+</footer>
 
 
  <%# the modal  %>
@@ -17,7 +37,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header ContactModalBackground">
-        <a class="modal-title" id="ContactModalLabel" href="#" target="_blank"><img class="project-logo-prev" src="./images/Recruitment/HEADTRADE.png" alt="Recruitment logo"></a>
+        <h3 class="modal-title" id="ContactModalLabel">Contact form</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -30,25 +50,25 @@
           method="POST"
           enctype="multipart/form-data"
         >
-          <label>
-            Your email:
+          <label class="d-block">
+            Your email:<br>
             <input type="email" name="email">
           </label>
-          <label>
-            Your message:
+          <label style="width:100%;">
+            Your message:<br>
             <textarea name="message"></textarea>
           </label>
           <label>
-            Your file:
+            Feel free to add a screenshot or anything that might helps:
             <input type="file" name="upload">
           </label>
-          <button type="submit">Send</button>
+          <button class="modal-send-button" type="submit">Send</button>
         </form>
 
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <h5>Thank you for your message!</h5>
       </div>
     </div>
   </div>
@@ -61,14 +81,50 @@
 
 
 
-
 <style>
 footer{
   display: flex;
-  position: absolute;
-  bottom: 0;
+  left: 0 ; right: 0; bottom: 0;
   width: 100%;
-  backgorund-color: #425c75;
+  background-color: #425c75;
   height: 300px;
+}
+.footer-logo{
+  width: 300px;
+  filter: drop-shadow(3px 3px 5px #303E34);
+  margin: 10px auto;
+}
+.contact-us{
+  text-decoration: none;
+  color: white;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+
+
+    /* modal styles */
+.ContactModalBackground{
+  background-color:#7D7D7D;
+}
+label{
+  font-weight: bold;
+  color: white;
+}
+input, textarea{
+  background-color: #F9F0E1;
+}
+textarea{
+  width: 80%;
+  height: 180px;
+}
+.modal-footer{
+    background-color:#7D7D7D;
+}
+.modal-send-button{
+  width: fit-content;
+  padding: 5px 25px;
+  border-radius: 2px;
+  float: right;
 }
 </style>

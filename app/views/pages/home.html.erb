@@ -17,11 +17,12 @@
   </header>
   <body>
 
-<% welcomeSentence = ['hi', 'hello', 'hallo'] %>
-<%= welcomeSentence.sample %>
+    <% welcomeSentence = ['hi', 'hello', 'hallo'] %>
+    <%= welcomeSentence.sample %>
+    <div style="width: 20%; background-color: red; height: 1000px;"></div>
 
 
-  <%= render :partial => 'shared/bg-images' %>
-  <%= render :partial => 'shared/footer' %>
+    <%= render :partial => 'shared/bg-images' %>
   </body>
+  <%= render :partial => 'shared/footer' %>
 </html>
