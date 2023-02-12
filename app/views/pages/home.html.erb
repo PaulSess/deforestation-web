@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
   <%= stylesheet_link_tag "home.css" %>
   <%= stylesheet_link_tag "/app/views/shared/navbar.css" %>
+  <%= stylesheet_link_tag "/app/views/shared/_bg-images.scss" %>
+
   <title>Document</title>
 </head>
   <%= render :partial => 'shared/navbar' %>
@@ -17,5 +19,8 @@
 
 <% welcomeSentence = ['hi', 'hello', 'hallo'] %>
 <%= welcomeSentence.sample %>
+
+
+  <%= render :partial => 'shared/bg-images' %>
   </body>
 </html>

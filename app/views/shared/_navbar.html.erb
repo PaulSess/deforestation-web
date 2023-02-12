@@ -11,7 +11,9 @@
 
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#7fba72;">
         <div class="container-fluid">
-            <%= image_tag("deforestation-word-logo.png", {:style => "width:200px; filter: drop-shadow(3px 3px 5px #303E34);"}) %>
+          <%= link_to root_path do %>
+              <%= image_tag("deforestation-word-logo.png", {:style => "width:200px; filter: drop-shadow(3px 3px 5px #303E34);"}) %>
+          <% end %>
             <%# <a href="#" class="navbar-brand">Brand</a> %>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -54,6 +56,9 @@
   .dissapear-in-collapse {
     display: none;
   }
+}
+.navbar{
+  box-shadow: rgba(105, 130, 105, 0.876) 0px 0px 10px;;
 }
 </style>
   </body>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag "/app/views/shared/_bg-images.scss" %>
+  <title>Document</title>
+</head>
+<body>
+<div class="bg-images">
+  <%= image_tag("fire.png", class:"bg-fire") %>
+  <%= image_tag("forest.png", class:"bg-forest") %>
+</div>
+
+</body>
+<style>
+  .bg-images{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 1px;
+    opacity: 70%;
+    height: fit-content;
+  }
+  .bg-forest{
+    width: 40%;
+    float: right;
+    margin-right: 20px;
+  }
+  .bg-fire{
+    width: 32.3%;
+    float: left;
+  }
+</style>
+</html>
