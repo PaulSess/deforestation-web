@@ -3,28 +3,43 @@
 <body>
   <section id="about-sec-1">
     <div id="welcome-header">
-      <h1>Welchome to Deforestation</h1>
+      <h1>Welcome to Deforestation</h1>
+      <h3>The platform to help the amazon, where we track slash and burn and other illegal activities to conserve nature.</h3>
     </div>
     <%= image_tag("lingchor-cut.jpeg", class:"about-header-img") %>
+    <div class="custom-shape-divider-bottom-1676245033">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+    </svg>
+</div>
   </section>
 
   <section id="about-sec-2">
     <div class="about-card">
       <%= image_tag("satellite-cut.jpg", class:"card-img sat-img") %>
-      <p></p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, rerum voluptates. Optio incidunt numquam nam minima quibusdam tenetur quam beatae odio corrupti omnis, ad deserunt ea officia ipsum voluptate. Repellendus.</p>
     </div>
 
     <div class="about-card">
+      <%= image_tag("hossein-saberi-fire.jpg", class:"card-img sat-img") %>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, rerum voluptates. Optio incidunt numquam nam minima quibusdam tenetur quam beatae odio corrupti omnis, ad deserunt ea officia ipsum voluptate. Repellendus.</p>
 
     </div>
 
     <div class="about-card">
+      <%= image_tag("berend-leupen-monkey.jpg", class:"card-img sat-img") %>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, rerum voluptates. Optio incidunt numquam nam minima quibusdam tenetur quam beatae odio corrupti omnis, ad deserunt ea officia ipsum voluptate. Repellendus.</p>
 
     </div>
   </section>
+  <section id="about-sec-3">
     <%= image_tag("donald-giannatti-sat-cut.jpg", class:"about-header-img") %>
-
-    <%# <%= render :partial => 'shared/bg-images' %>
+    <div class="custom-shape-divider-top-1676245463">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+      </svg>
+    </div>
+  </section>
 </body>
   <%= render :partial => 'shared/footer' %>
 </html>
@@ -33,6 +48,7 @@
 <style>
 #about-sec-1{
   height: fit-content;
+  position: relative;
 }
 .about-header-img{
   width: 100%;
@@ -51,8 +67,76 @@
   font-family: 'Bebas Neue', cursive;
   font-size: 50px;
 }
+#welcome-header h3{
+  position: absolute;
+  color: #F9F0E1;
+  width: 70%;
+  margin: 200px auto;
+  filter: drop-shadow(3px 3px 5px #303E34);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+#about-sec-2{
+  display: flex;
+  justify-content: space-around;
+  margin: 90px 20px;
+}
+#about-sec-3{
+  position: relative;
+}
 .sat-img{
   width: 200px;
   border-radius: 50%;
+  margin-bottom: 40px;
+}
+.about-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-card p{
+  width: 80%;
+  text-align: center;
+}
+/* wave  */
+.custom-shape-divider-bottom-1676245033 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1676245033 svg {
+    position: relative;
+    display: block;
+    width: calc(190% + 1.3px);
+    height: 130px;
+}
+
+.custom-shape-divider-bottom-1676245033 .shape-fill {
+    fill: #FFFF;
+}
+/* wave 2  */
+.custom-shape-divider-top-1676245463 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1676245463 svg {
+    position: relative;
+    display: block;
+    width: calc(180% + 1.3px);
+    height: 130px;
+}
+
+.custom-shape-divider-top-1676245463 .shape-fill {
+    fill: #FFFF;
 }
 </style>
