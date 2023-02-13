@@ -14,7 +14,7 @@
   <div class="container">
     <div class="row h-75">
       <div class="col">
-        <%= link_to root_path do %>
+        <%= link_to root_path, { :style => "border-bottom: solid 1px white; padding-bottom: 34px;" } do %>
           <%= image_tag("deforestation-word-logo.png", { :class => "footer-logo" }) %>
         <% end %>
       </div>
@@ -26,7 +26,7 @@
     </div>
     <div class="row h-25">
       <div class="col">
-        Here will be more information in the footer Lorem ipsum dolor sit amet consectetur adipisicptatem earum accusamus culpa exercitationem obcaecati, nobis eligendi, similique
+        Here will be more information in the footer Lorem ipsum dolor sit amet consectetur adipisicptatem earum accusamus culpa exercitationem obcaecati, nobis eligendi, similique. @
       </div>
     </div>
   </div>
@@ -84,8 +84,9 @@
 
 
 <style>
+
+
 footer{
-  display: flex;
   left: 0 ; right: 0; bottom: 0;
   width: 100%;
   height: 300px;
