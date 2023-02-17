@@ -6,5 +6,5 @@ class User < ApplicationRecord
   validates :Username, presence: true
   validates :email, presence: true
   validates :password, presence: true
-  belongs_to :departments
+  belongs_to :departments, foreign_key: 'departments_id'
 end

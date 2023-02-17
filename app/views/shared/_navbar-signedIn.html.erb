@@ -36,18 +36,18 @@
                     <%# <% end %>
                     <%# <%= link_to "Log Out", destroy_user_session_path, data: {turbo_method: :delete}, class:"dropdown-item" %>
                     <%# <a href="new_user_session_path" class="nav-item nav-link"><i style="margin-left:10px;margin-right:3px;" class="fa-solid fa-right-to-bracket"></i>Log In</a> %>
+                    <button class="hamburger" onclick="w3_open()"><i id="nav-not-dropped" class="fa-regular fa-square-caret-down"></i> <i id="nav-dropped" class="fa-solid fa-square-caret-down d-none"></i></button>
+                    <%# ☰ %>
                     <a class="nav-item nav-link" href="<%= new_user_session_path(@devise)%>"><i style="margin-left:10px;margin-right:3px;" class="fa-solid fa-right-to-bracket"></i>Log In</a>
-                    <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
                 </div>
             </div>
         </div>
     </nav>
 
 <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
-  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-  <a href="#" class="w3-bar-item w3-button">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <button id="sidebar-close" onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+  <a href="#" class="w3-bar-item w3-button">Bookmarks</a>
+  <a href="#" class="w3-bar-item w3-button">Damage History</a>
 </div>
 
 <style>
@@ -63,6 +63,36 @@
   top: 0;
   z-index: 1100;
 }
+#mySidebar{
+  background-color: #73956C;
+  right: 0px !important;
+}
+#mySidebar button{
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+#mySidebar a{
+  padding: 20px 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+#mySidebar a:nth-child(2){
+  background-color: #719F67;
+}
+#mySidebar a:nth-child(3){
+  background-color: #688f5e;
+}
+#sidebar-close{
+  background-color: #7AA96F;
+}
+.hamburger{
+  background-color: #7fba72;
+  border: none;
+  padding: 0;
+  font-size: 25px;
+}
 </style>
+  <%= javascript_include_tag "navbar-signedIn", "data-turbo-track": "reload", defer: true %>
   </body>
   </html>
