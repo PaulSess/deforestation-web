@@ -18,9 +18,19 @@
   </header>
   <body>
 
-    <% welcomeSentence = ['hi', 'hello', 'hallo'] %>
-    <%= welcomeSentence.sample %>
-    <%# <div style="width: 20%; background-color: red; height: 1000px; position: relative; z-index: 10;"></div> %>
+    <% exampleDepartment = ['Peru', 'Brazil', 'Columbia', 'Peru', 'Black forrest'] %>
+  <div id="department-headers">
+    <h1>Department:</h1>
+    <%# <h3><%= current_user.departments_id.name </h3> %>
+    <h2 style="margin-left: 30px;"><%=  exampleDepartment.sample %></h2>
+  </div>
+
+  <div id="fetch-div">
+    <div id="inside-fetch-div">
+      <h3>Start here:</h3>
+      <button>Search</button>
+    </div>
+  </div>
 
     <%= render :partial => 'shared/bg-images' %>
   </body>
@@ -36,3 +46,45 @@
     }
   </script>
 </html>
+
+<style>
+#department-headers{
+  margin: 100px 0 100px 15%;
+  color: #9c9c9c;
+}
+#department-headers h1{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 50px;
+}
+#department-headers h2{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 40px;
+}
+#fetch-div{
+  background-color: rgba(255, 255, 255, 0.874);
+  box-shadow: 0px 0px 2px grey;
+  border-radius: 10px;
+  border: 1px black solid;
+  width: 350px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 0 200px 30%;
+}
+#fetch-div div{
+  width: fit-content;
+  margin-top: 6%;
+}
+#inside-fetch-div > h2{
+  width: fit-content !important;
+  margin: auto important !important;
+}
+#fetch-div > div > button{
+  margin: 60px auto 0 auto;
+  background-color: #F9F0E1;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 50px;
+}
+</style>
