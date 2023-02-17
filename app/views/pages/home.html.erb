@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
   <%= stylesheet_link_tag "home.css" %>
   <%= stylesheet_link_tag "/app/views/shared/navbar.css" %>
@@ -12,7 +13,7 @@
 
   <title>Document</title>
 </head>
-  <%= render :partial => 'shared/navbar' %>
+  <%= render :partial => 'shared/navbar-signedIn' %>
   <header>
   </header>
   <body>
@@ -21,8 +22,17 @@
     <%= welcomeSentence.sample %>
     <%# <div style="width: 20%; background-color: red; height: 1000px; position: relative; z-index: 10;"></div> %>
 
-
     <%= render :partial => 'shared/bg-images' %>
   </body>
   <%= render :partial => 'shared/footer' %>
+
+  <script>
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+  </script>
 </html>
