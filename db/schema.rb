@@ -26,8 +26,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_13_130505) do
     t.string "coordinates"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "departments_id", null: false
-    t.index ["departments_id"], name: "index_projects_on_departments_id"
+    t.bigint "department_id", null: false
+    t.index ["department_id"], name: "index_projects_on_department_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -39,12 +39,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_13_130505) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "Username"
-    t.bigint "departments_id", null: false
-    t.index ["departments_id"], name: "index_users_on_departments_id"
+    t.bigint "department_id", null: false
+    t.index ["department_id"], name: "index_users_on_department_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "projects", "departments", column: "departments_id"
-  add_foreign_key "users", "departments", column: "departments_id"
+  add_foreign_key "projects", "departments"
+  add_foreign_key "users", "departments"
 end

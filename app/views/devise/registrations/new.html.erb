@@ -33,12 +33,12 @@
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
     </div>
 <%# = f.input :location_id, :collection => Location.all.collect {|c| [c.loc_name, c.loc_id]} %>
-    <div class="field">
+    <%# <div class="field">
       <%= f.label :department %><br />
-      <%# <%= f.email_field :email, autofocus: true, autocomplete: "email" %> %>
-      <%= f.input :departments_id, value_method: :id, :collection.to_i => Department.first.id %>
-    </div>
-
+      <%# <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%# <%= f.input :departments_id, value_method: :id, :collection.to_i => Department.first.id %>
+    <%# </div> %>
+ 
     <div class="actions">
       <%= f.submit "Sign up", style:"background-color:transparent;border:none;" %>
     </div>
