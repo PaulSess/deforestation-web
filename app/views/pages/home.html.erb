@@ -1,1 +1,34 @@
 <%= image_tag("lingchor-cut.jpg", class:"about-header-img") %>
+<div class="banner">
+  <div class="blocks"></div>
+</div>
+
+
+<style>
+.blocks{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  font-size: 10vh;
+  font-size: 10vw;
+  color: #fff;
+  font-weight: 700;
+}
+.banner{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+}
+.banner .blocks{
+  position: relative;
+  display: block;
+  width: 5vw;
+  height: 5vw;
+  background: #fff;
+}
+</style>
