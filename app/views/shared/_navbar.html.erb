@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <%= stylesheet_link_tag "/app/views/shared/_navbar.scss" %>
+      <%= stylesheet_link_tag "/app/assets/stylesheets/components/_navbar.scss" %>
     <title>Document</title>
   </head>
   <body>
@@ -52,6 +52,15 @@
         </div>
     </nav>
 <style>
+@media only screen and (max-width: 990px) {
+  .dissapear-in-collapse {
+    display: none;
+  }
+}
+html{
+  background-color: black;
+}
+/* not connected to the html file  */
 @media only screen and (max-width: 990px) {
   .dissapear-in-collapse {
     display: none;
