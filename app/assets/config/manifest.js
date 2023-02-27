@@ -1,4 +1,4 @@
 //= link_tree ../images
 //= link_tree ../builds
-//= link home.css
+ //deleted this one// = link home.css
 //= link application.css
