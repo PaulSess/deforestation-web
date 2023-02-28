@@ -1,4 +1,4 @@
-#about-sec-1{
+#about-sec-1 {
   height: fit-content;
   position: relative;
 }
@@ -28,6 +28,21 @@
   font-family: 'Poppins', sans-serif;
   text-align: center;
   transition-delay: 200ms;
+  font-size: 1.8rem;
+}
+#get-started-btn{
+  position: absolute;
+  top: 60%;
+  left: 43%;
+  border-radius: 3px;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.7rem;
+  padding: 20px 50px;
+  background-color: #F9F0E1;
+}
+#get-started-btn:active{
+box-shadow: inset 0px 0px 4px 4px rgb(83, 83, 83);
+
 }
 #about-sec-2{
   display: flex;

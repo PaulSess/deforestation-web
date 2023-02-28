@@ -6,6 +6,6 @@ class User < ApplicationRecord
   validates :Username, presence: true
   validates :email, presence: true
   validates :password, presence: true
-  belongs_to :departments, class_name: 'ActivDepartment', foreign_key: 'department_id'
-  has_many :projects, foreign_key: 'department_id' # , class_name: 'Projects'
+  belongs_to :department
+  has_many :projects, through: :departments
 end

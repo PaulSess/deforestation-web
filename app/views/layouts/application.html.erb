@@ -13,13 +13,14 @@
       <%# font awesome  %>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
       <%# animations from animate.css  %>
-      <linkrel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
       <%# google fonts  %>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,200;0,600;1,300;1,400&display=swap" rel="stylesheet">      <%# stylesheets  %>
     <%# <link rel="stylesheet" href="https://rsms.me/inter/inter.css"> %>
-    <%= stylesheet_link_tag "/app/assets/stylesheets/application.scss", "data-turbo-track": "reload" %>
+    <%# <%= stylesheet_link_tag "/app/assets/stylesheets/application.scss", "data-turbo-track": "reload"  %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
 
   </head>
@@ -27,7 +28,6 @@
 
 
     <%# / / ??? copied from giftit, not sure what it does.. %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%# <%= render 'shared/ios_pwa_links' %>
     <%# <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
 

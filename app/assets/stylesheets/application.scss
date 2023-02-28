@@ -1,22 +1,25 @@
 @import "home";
-@import "about.scss";
+@import "pages/about";
+// @import "about.scss";
 @import "/app/views/shared/_navbar.scss";
 @import "/app/views/shared/_bg-images.scss";
 // ??
-@import "pages/about";
-@import "about";
+
+// @import "about";
 @import "/app/assets/stylesheets/components/navbar";
 
 
 // html{
 //   position: relative;
 // }
-html, body {
-  min-height: 100%;
-  margin: 0;
-  background-color: #F5F5F5;
-}
-body{
-  margin-top: 90px;
-  margin-bottom: 300px;
-}
+
+
+// html, body {
+//   min-height: 100%;
+//   margin: 0;
+//   background-color: #F5F5F5;
+// }
+// body{
+//   margin-top: 90px;
+//   margin-bottom: 300px;
+// }
